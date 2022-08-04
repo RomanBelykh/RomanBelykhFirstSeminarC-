@@ -17,7 +17,7 @@ double[] RandomMasDoubl (int size, int ot, int doo)
 
     for (int i = 0; i < size; i++)
     {
-     array[i] =Math.Round(new Random().Next(ot, doo ) + new Random().NextDouble(), 3)  ;
+     array[i] =Math.Round(new Random().Next(ot, doo ) + new Random().NextDouble(), 3) ;
     }
     return array;
 }
