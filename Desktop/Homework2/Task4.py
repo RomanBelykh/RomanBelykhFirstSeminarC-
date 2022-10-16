@@ -1,22 +1,17 @@
 # Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
-# Найдите произведение элементов на указанных позициях. П
+# Найдите произведение элементов на указанных позициях. 
 # Позиции хранятся в файле file.txt в одной строке одно число.
 
-import random
+num = int(input("Enter the value of N "))
+n1 = int (input("Position one: "))
+n2 = int (input("Position two: "))
 
-N = int(input("Введите размер списка: ")) 
-a = []
+num_list = list(range(-num, num+1))
 
-for i in range(N):  
-    new_element = random.randint(-N, N)
-    a.append(new_element)
-print(f'Ваш список: {a}')
+print(num_list)
+len_list = len(num_list)
 
-num = 1
-with open('file.txt') as file:
-    for pos in file:
-        if int(pos) < N:
-            num *= a[int(pos)]
-        else: num *= 1
-print(num)
-
+if len_list >= n1>0 and len_list >=2>0:
+    print(num_list[n1-1]*num_list[n2-1])
+else:
+    print("There are no values for these index")
